@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>8.2 — Reading Error Messages — FIT2109 Week 8</title>
+<title>8.3 — Reading Error Messages — FIT2109 Week 8</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 16px; line-height: 1.7; color: #1a1a2e; background: #f9f9fb; }
@@ -43,7 +43,7 @@
 <body>
 <div class="page">
 <span class="section-badge badge-concept">Core material</span>
-<h2>8.2 Reading Error Messages and Tracebacks</h2>
+<h2>8.3 Reading Error Messages and Tracebacks</h2>
 
 <p>An error message is the program telling you where to start. Reading it carefully is the single highest-leverage debugging action you can take — yet many developers glance at it and immediately start changing code instead.</p>
 
@@ -111,7 +111,7 @@
 <span class="hi-error">Abort trap: 6</span>                        <span class="comment"># assert() failed or heap corruption detected</span>
 <span class="hi-error">Floating point exception</span>             <span class="comment"># integer division by zero</span></code></pre>
 
-<p>"Segmentation fault" (or "segfault") is the most common. It means the program tried to read or write a memory address it was not allowed to access — typically from a NULL pointer dereference, a buffer overrun, or using memory after it was freed. On its own, the message tells you nothing about <em>where</em> in your code the fault happened — that is why you need a debugger (see section 8.6). Compile with <code>gcc -g</code> and run under GDB to get the exact line.</p>
+<p>"Segmentation fault" (or "segfault") is the most common. It means the program tried to read or write a memory address it was not allowed to access — typically from a NULL pointer dereference, a buffer overrun, or using memory after it was freed. On its own, the message tells you nothing about <em>where</em> in your code the fault happened — that is why you need a debugger (see section 8.7). Compile with <code>gcc -g</code> and run under GDB to get the exact line.</p>
 
 <div class="callout callout-note">
   <strong>C errors are silent until they crash</strong>
